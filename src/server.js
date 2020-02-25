@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 // DB SETUP & TEARDOWN
 const withDB = async (operations, res) => {
   try {
-    // connect() returns a (client object) promise
     const client = await MongoClient.connect('mongodb://localhost:27017', {
       useUnifiedTopology: true
     });
